@@ -1,3 +1,3 @@
 # Klone Koding 2022
 
-blah..
+I learned HTML & CSS
