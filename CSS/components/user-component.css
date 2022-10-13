@@ -1,5 +1,7 @@
 .user-component {
     justify-content: space-between;
+    margin-bottom:15px;
+    
 }
 
 .user-component,
@@ -8,11 +10,20 @@
     align-items: center;
 }
 
+.user-component:hover {
+    background-color: rgb(207, 207, 207, 0.2);
+}
+
+.user-component:active {
+    background-color: rgb(207, 207, 207, 0.4);
+}
+
 .user-component__avatar {
     width: 60px;
     height: 60px;
     border-radius: 23px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .user-component__title {

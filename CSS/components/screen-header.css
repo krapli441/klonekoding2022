@@ -17,3 +17,15 @@
 .screen-header__icons span {
     margin-left: 20px;
 }
+
+
+.screen-header__gear-ellipsis {
+    display: flex;
+    position:absolute;
+    background-color: tomato;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    margin-left:85px;
+    margin-top:-20px;
+}
