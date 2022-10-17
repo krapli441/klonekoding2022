@@ -19,7 +19,7 @@
 }
 
 
-.screen-header__gear-ellipsis {
+.screen-header__friends_gear-ellipsis {
     display: flex;
     position:absolute;
     background-color: tomato;
@@ -28,4 +28,16 @@
     border-radius: 3px;
     margin-left:85px;
     margin-top:-20px;
+}
+
+.screen-header__more_gear-ellipsis {
+    display: flex;
+    position:absolute;
+    background-color: tomato;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    margin-left:125px;
+    margin-top:-20px;
+
 }
