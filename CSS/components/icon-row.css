@@ -22,12 +22,14 @@
 }
 
 .icon-row__icon i {
-    font-size: 35px;
+    font-size: 30px;
     
 }
 
 .icon-row__icon span {
     margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
   
 }
 
