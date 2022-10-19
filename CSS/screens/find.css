@@ -105,3 +105,29 @@
     margin-left:3px;
     font-size: 12px;
 }
+
+.open-post__heart-count:hover i {
+    will-change: transform;
+    animation: heartbeat 0.4s linear infinite;
+}
+
+@keyframes heartbeat {
+
+    0% {
+        color:white;
+        transform: none;
+
+    }
+
+    50% {
+        color:tomato;
+        transform:scale(1.2);
+
+    }
+
+    100% {
+        color:white;
+        transform: none;
+    }
+
+}

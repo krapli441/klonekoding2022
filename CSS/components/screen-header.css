@@ -41,3 +41,19 @@
     margin-top:-20px;
 
 }
+
+@keyframes rotategoc {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+
+}
+
+
+.screen-header__icons .fa-gear:hover {
+    animation: rotategoc 2s ease-in-out infinite;
+}

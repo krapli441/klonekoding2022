@@ -1,6 +1,6 @@
 #chat-screen {
     background-color: #abc1d1;
-    height: 11000vh;
+    height: 100vh;
 }
 
 #chat-screen .alt-header,
@@ -23,11 +23,80 @@
 
 
 
+@keyframes fadein {
+    
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes imgfadein {
+
+    from {
+        transform:translateX(30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textfadein {
+
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mytextfadein {
+
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.chat__timestamp {
+    animation: fadein 0.3s ease-in-out;
+}
+
+.message-row img {
+    animation: imgfadein 0.5s ease-in-out;
+}
+
+
+.message-row__content {
+    animation: textfadein 0.6s ease-in-out;
+}
+
+.message-row__me {
+    animation: mytextfadein 0.6s ease-in-out;
+
+}
+
+
 .main-chat {
-    margin-top: 120px;
+    margin-top: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .chat__timestamp {
@@ -65,7 +134,7 @@
     align-items: flex-end;
 }
 
-.message__bubble {
+.message__bubble, .message__bubble__me {
     background-color: white;
     padding: 8px 10px;
     font-size:18px;
@@ -82,7 +151,7 @@
 
 
 
-.message-row__me .message__bubble {
+.message-row__me .message__bubble, .message__bubble__me {
     background-color: var(--yellow);
     border-radius: 10px;
     border-top-right-radius: 0px;
@@ -109,12 +178,13 @@
 }
 
 .reply .reply__column:first-child {
-    width: 4%;
+    width: 5%;
 }
 
 .reply .reply__column:last-child {
-    width: 96%;
+    width: 95%;
     position:relative;
+    display: block;
 }
 
 .reply input {
@@ -123,12 +193,14 @@
     width: 100%;
     border:var(--main-border);
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-.reply__column:last-child > i,
+
+.reply__column:last-child > i, 
 .reply__column:last-child button {
     position:absolute;
-    right:-19px;
+    right:-15px;
     top:3px;
 }
 
@@ -156,4 +228,24 @@
 
 .reply__column button i {
     opacity: 1;
+}
+
+
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button
+ {
+    opacity: 0;
+}
+
+.reply:focus-within input {
+    width: 92vw;
+    transform:translateX(-10%);
 }

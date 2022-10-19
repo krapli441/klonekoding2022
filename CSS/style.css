@@ -11,6 +11,7 @@
 @import "components/user-component.css";
 @import "components/badge.css";
 @import "components/icon-row.css";
+@import "components/no-mobile.css";
 
 /* Screens */
 
@@ -20,6 +21,7 @@
 @import "screens/more.css";
 @import "screens/settings.css";
 @import "screens/chat.css";
+
 
 body {
     color: #2e363e;
